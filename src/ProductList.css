@@ -73,6 +73,27 @@ body {
     
     gap: 20px;
 }
+.category-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    
+    /* These create the two lines */
+    border-top: 1.5px solid #333;
+    border-bottom: 1.5px solid #333;
+    
+    /* Spacing */
+    margin: 40px auto;      /* Space between different categories */
+    padding: 10px 0;        /* Space between the text and the lines */
+    
+    /* Width control */
+    width: 80%;             /* Adjust this percentage to make the lines shorter/longer */
+    max-width: 600px;       /* Sets a maximum width so it looks good on wide screens */
+    
+    /* Ensures it stays on its own lines */
+    display: block;
+}
 
 /* Pseudo-classes - Hover effect on product button */
 .product-card:hover {
@@ -210,6 +231,32 @@ body {
     transition-duration: 0.4s;
     cursor: pointer;
   }
+  .cart-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-quantity-number {
+    position: absolute;
+    /* Adjust these values to center it perfectly in the basket */
+    top: 15px; 
+    right: 22px; 
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    pointer-events: none; /* Makes sure you can still click the icon under it */
+}
+
+/* Ensure the Added buttons look gray like your goal photo */
+.product-button.added {
+    background-color: #808080 !important;
+    color: #ffffff;
+    cursor: not-allowed;
+    border: none;
+}
+
   
   .product-button:hover {
     background-color: #45a049;
